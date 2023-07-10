@@ -1,0 +1,80 @@
+.grid > .column {
+  min-width: 28rem;
+  margin-bottom: 2.5rem;
+}
+
+.grid--three > .column {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .grid--three > .column {
+    margin-right: 2%;
+  }
+
+  .grid--three > .column {
+    flex-basis: 48%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid--three > .column {
+    margin-right: 2.33%;
+  }
+
+  .grid--three > .column {
+    flex-basis: 31%;
+  }
+}
+
+.devlist .dev .dev__profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.devlist .dev .dev__meta h3 {
+  color: var(--color-sub);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.devlist .dev .dev__meta h5 {
+  color: var(--color-text);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.devlist .dev .dev__info {
+  margin: 1.5rem 0;
+  font-size: 1.35rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-light);
+  width: auto;
+  height: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+
+.card__body {
+  padding: 2rem 2.5rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 2px solid var(--color-main);
+  object-fit: cover;
+}
+
+.avatar--md {
+  height: 7rem;
+  width: 7rem;
+}

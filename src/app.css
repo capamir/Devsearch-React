@@ -1,0 +1,80 @@
+.container {
+  width: 92%;
+  max-width: 165rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.container--narrow {
+  width: 92%;
+  max-width: 120rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 90%;
+  }
+
+  .container--narrow {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+
+  .container--narrow {
+    width: 72%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 72%;
+  }
+
+  .container--narrow {
+    width: 65%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: var(--color-light);
+  font-weight: var(--font-medium);
+  color: var(--color-sub);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.6rem;
+  outline-width: 0;
+  outline-color: transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn--sub {
+  background-color: var(--color-sub-light);
+  color: var(--color-white);
+}
