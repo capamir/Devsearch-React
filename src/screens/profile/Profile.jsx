@@ -1,4 +1,6 @@
 import React from "react";
+// import { Link } from "react-router-dom";
+import { SocialLink, TagLg as Tag } from "../../components";
 import "./profile.css";
 
 function Profile() {
@@ -9,44 +11,19 @@ function Profile() {
           <div class="column column--1of3">
             <div class="card text-center">
               <div class="card__body dev">
-                <img
-                  class="avatar avatar--xl"
-                  src="https://avatars.githubusercontent.com/u/33843378"
-                  alt=""
-                />
+                <img class="avatar avatar--xl" src="images/dennis.jpg" alt="" />
                 <h2 class="dev__name">Dennis Ivanov</h2>
                 <p class="dev__title">
                   Expirance FullStack Developer, Youtuber and Instructor
                 </p>
                 <p class="dev__location">Based in Florida, USA</p>
                 <ul class="dev__social">
-                  <li>
-                    <a title="Github" href="#" target="_blank">
-                      <i class="im im-github"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="Stackoverflow" href="#" target="_blank">
-                      <i class="im im-stackoverflow"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="Twitter" href="#" target="_blank">
-                      <i class="im im-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="LinkedIn" href="#" target="_blank">
-                      <i class="im im-linkedin"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a title="Personal Website" href="#" target="_blank">
-                      <i class="im im-globe"></i>
-                    </a>
-                  </li>
+                  <SocialLink />
+                  <SocialLink />
+                  <SocialLink />
+                  <SocialLink />
                 </ul>
-                <a href="#" class="btn btn--sub btn--lg">
+                <a href="/" class="btn btn--sub btn--lg">
                   Send Message{" "}
                 </a>
               </div>
@@ -103,33 +80,15 @@ function Profile() {
 
                 <h3 class="devInfo__subtitle">Other Skills</h3>
                 <div class="devInfo__otherSkills">
-                  <span class="tag tag--pill tag--sub tag--lg">
-                    <small>Figma</small>
-                  </span>
-                  <span class="tag tag--pill tag--sub tag--lg">
-                    <small>Vuejs</small>
-                  </span>
-                  <span class="tag tag--pill tag--sub tag--lg">
-                    <small>REST API</small>
-                  </span>
-                  <span class="tag tag--pill tag--sub tag--lg">
-                    <small>GraphQL</small>
-                  </span>
-                  <span class="tag tag--pill tag--sub tag--lg">
-                    <small>TypeScript</small>
-                  </span>
-                  <span class="tag tag--pill tag--sub tag--lg">
-                    <small>Webpack</small>
-                  </span>
-                  <span class="tag tag--pill tag--sub tag--lg">
-                    <small>NextJS</small>
-                  </span>
-                  <span class="tag tag--pill tag--sub tag--lg">
-                    <small>Postgres</small>
-                  </span>
-                  <span class="tag tag--pill tag--sub tag--lg">
-                    <small>MongoDB</small>
-                  </span>
+                  <Tag tagName={"Figma"} />
+                  <Tag tagName={"Vuejs"} />
+                  <Tag tagName={"REST API"} />
+                  <Tag tagName={"GraphQL"} />
+                  <Tag tagName={"TypeScript"} />
+                  <Tag tagName={"Webpack"} />
+                  <Tag tagName={"NextJS"} />
+                  <Tag tagName={"Postgres"} />
+                  <Tag tagName={"MongoDB"} />
                 </div>
               </div>
             </div>
@@ -152,80 +111,8 @@ function Profile() {
                           </a>
                         </p>
                         <p class="project--rating">
-                          <span style="font-weight: bold">92%</span> Postitive
-                          Feedback (62 Votes)
-                        </p>
-                        <div class="project__tags">
-                          <span class="tag tag--pill tag--main">
-                            <small>NextJS</small>
-                          </span>
-                          <span class="tag tag--pill tag--main">
-                            <small>GraphQL</small>
-                          </span>
-                          <span class="tag tag--pill tag--main">
-                            <small>TypeScript</small>
-                          </span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="column">
-                  <div class="card project">
-                    <a href="single-project.html" class="project">
-                      <img
-                        class="project__thumbnail"
-                        src="../../images/project-c.png"
-                        alt="project thumbnail"
-                      />
-                      <div class="card__body">
-                        <h3 class="project__title">Another Landing Page</h3>
-                        <p>
-                          <a class="project__author" href="profile.html">
-                            By Dennis Ivanov
-                          </a>
-                        </p>
-                        <p class="project--rating">
-                          <span style="font-weight: bold">36%</span> Postitive
-                          Feedback (18 Votes)
-                        </p>
-                        <div class="project__tags">
-                          <span class="tag tag--pill tag--main">
-                            <small>NextJS</small>
-                          </span>
-                          <span class="tag tag--pill tag--main">
-                            <small>GraphQL</small>
-                          </span>
-                          <span class="tag tag--pill tag--main">
-                            <small>TypeScript</small>
-                          </span>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="column">
-                  <div class="card project">
-                    <a href="single-project.html" class="project">
-                      <img
-                        class="project__thumbnail"
-                        src="../../images/project-a.png"
-                        alt="project thumbnail"
-                      />
-                      <div class="card__body">
-                        <h3 class="project__title">
-                          Yoga Studio Landing Page Website and Design
-                        </h3>
-                        <p>
-                          <a class="project__author" href="profile.html">
-                            By Dennis Ivanov
-                          </a>
-                        </p>
-                        <p class="project--rating">
-                          <span style="font-weight: bold">98%</span> Postitive
-                          Feedback (72 Votes)
+                          <span style={{ fontWeight: "bold" }}>92%</span>{" "}
+                          Postitive Feedback (62 Votes)
                         </p>
                         <div class="project__tags">
                           <span class="tag tag--pill tag--main">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Tag } from "../index";
+import { TagMin as Tag } from "../index";
 import "./profileCard.css";
 
 function ProfileCard() {
