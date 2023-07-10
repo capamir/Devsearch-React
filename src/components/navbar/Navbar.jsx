@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
 function Navbar() {
   return (
     <header className="header">
       <div className="container container--narrow">
-        <a href="/" className="header__logo">
+        <Link to="/" className="header__logo">
           <img src="images/logo.svg" alt="DevSearch Logo" />
-        </a>
+        </Link>
         <nav className="header__nav">
           <input type="checkbox" id="responsive-menu" />
           <label htmlFor="responsive-menu" className="toggle-menu">
@@ -16,21 +17,29 @@ function Navbar() {
           </label>
           <ul className="header__menu">
             <li className="header__menuItem">
-              <a href="home.html">Developers</a>
+              <Link to="/profile" className="link">
+                Developers
+              </Link>
             </li>
             <li className="header__menuItem">
-              <a href="projects.html">Projects</a>
+              <Link to="projects.html" className="link">
+                Projects
+              </Link>
             </li>
             <li className="header__menuItem">
-              <a href="inbox.html">Inbox</a>
+              <Link to="inbox.html" className="link">
+                Inbox
+              </Link>
             </li>
             <li className="header__menuItem">
-              <a href="account.html">My Account</a>
+              <Link to="account.html" className="link">
+                My Account
+              </Link>
             </li>
             <li className="header__menuItem">
-              <a href="login.html" className="btn btn--sub">
+              <Link to="login.html" className="btn btn--sub link">
                 Login/Sign Up
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

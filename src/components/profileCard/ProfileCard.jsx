@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Tag } from "../index";
 import "./profileCard.css";
 
@@ -6,7 +7,7 @@ function ProfileCard() {
   return (
     <div className="column card">
       <div className="dev">
-        <a href="/profile.html" className="card__body">
+        <Link to="/profile" className="card__body">
           <div className="dev__profile">
             <img className="avatar avatar--md" src="images/dennis.jpg" alt="" />
             <div className="dev__meta">
@@ -29,7 +30,7 @@ function ProfileCard() {
             <Tag tagName={"Express"} />
             <Tag tagName={"GraphQL"} />
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

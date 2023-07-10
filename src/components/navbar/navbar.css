@@ -24,7 +24,7 @@
   gap: 6.5rem;
 }
 
-.header__menuItem > a {
+.header__menuItem .link {
   color: var(--color-light);
   font-weight: 300;
 }

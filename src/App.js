@@ -1,14 +1,18 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components";
-import { Home } from "./screens";
+import { Home, Profile } from "./screens";
 import "./app.css";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Home />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </Router>
   );
 }
 
