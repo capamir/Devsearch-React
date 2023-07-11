@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./socialLink.css";
 
 function SocialLink() {
   return (
     <li>
-      <a title="Github" href="/" target="_blank">
-        <i class="im im-github"></i>
-      </a>
+      <Link title="Github" to="/" target="_blank">
+        <i className="im im-github"></i>
+      </Link>
     </li>
   );
 }

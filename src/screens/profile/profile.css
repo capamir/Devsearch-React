@@ -87,24 +87,6 @@
   text-align: justify;
 }
 
-.devSkill {
-  margin-bottom: 3rem;
-}
-
-.devSkill__title {
-  font-size: 1.65rem;
-  font-weight: 500;
-  color: var(--color-sub-light);
-}
-
-@media screen and (min-width: 700px) {
-  .devSkill {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-  }
-
-  .devSkill__info {
-    flex-basis: 80%;
-  }
+.profile {
+  padding-top: 3rem;
 }

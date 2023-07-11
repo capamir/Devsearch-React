@@ -1,0 +1,27 @@
+.devSkill {
+  margin-bottom: 3rem;
+}
+
+.devSkill__title {
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: var(--color-sub-light);
+}
+
+.devSkill__info {
+  font-size: 1.45rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+@media screen and (min-width: 700px) {
+  .devSkill {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .devSkill__info {
+    flex-basis: 80%;
+  }
+}

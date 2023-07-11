@@ -4,5 +4,8 @@ export { default as TagMin } from "./tag/TagMin";
 export { default as TagLg } from "./tag/TagLg";
 
 export { default as ProfileCard } from "./profileCard/ProfileCard";
+export { default as ProjectCard } from "./projectCard/ProjectCard";
+
 export { default as Pagination } from "./pagination/Pagination";
 export { default as SocialLink } from "./socialLink/SocialLink";
+export { default as Skill } from "./skill/Skill";

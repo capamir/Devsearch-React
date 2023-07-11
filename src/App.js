@@ -8,10 +8,14 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+      <div className="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/project" element={<Profile />} />
+          <Route path="/message" element={<Profile />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

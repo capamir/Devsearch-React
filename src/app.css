@@ -1,3 +1,6 @@
+.main {
+  margin-top: 7.5rem;
+}
 .container {
   width: 92%;
   max-width: 165rem;
@@ -77,6 +80,34 @@
 .btn--sub {
   background-color: var(--color-sub-light);
   color: var(--color-white);
+}
+.grid > .column {
+  min-width: 28rem;
+  margin-bottom: 2.5rem;
+}
+
+.grid--three > .column {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .grid--three > .column {
+    margin-right: 2%;
+  }
+
+  .grid--three > .column {
+    flex-basis: 48%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid--three > .column {
+    margin-right: 2.33%;
+  }
+
+  .grid--three > .column {
+    flex-basis: 31%;
+  }
 }
 
 .card {
