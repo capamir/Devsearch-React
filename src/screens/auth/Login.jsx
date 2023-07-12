@@ -7,7 +7,7 @@ function Login() {
     <div className="auth">
       <div className="card">
         <div className="auth__header text-center">
-          <Link href="/">
+          <Link className="link" href="/">
             <img src="images/icon.svg" alt="icon" />
           </Link>
           <h3>Account Login</h3>
@@ -42,12 +42,16 @@ function Login() {
               type="submit"
               value="Log In"
             />
-            <Link href="/forgetpassword">Forget Password?</Link>
+            <Link className="link" to="/forgetpassword">
+              Forget Password?
+            </Link>
           </div>
         </form>
         <div className="auth__alternative">
           <p>Don’t have an Account?</p>
-          <Link href="/signup">Sign Up</Link>
+          <Link className="link" to="/signup">
+            Sign Up
+          </Link>
         </div>
       </div>
     </div>

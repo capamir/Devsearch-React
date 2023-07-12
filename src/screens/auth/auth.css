@@ -66,11 +66,11 @@
   align-items: center;
   margin: 2.5rem 0;
 }
-.auth .auth__actions a {
+.auth .auth__actions .link {
   text-decoration: underline;
 }
 
-.auth .auth__alternative a {
+.auth .auth__alternative .link {
   font-size: 2rem;
   font-weight: 500;
 }
@@ -90,6 +90,7 @@
   color: var(--color-text);
 }
 
+input.input[type="email"],
 input.input[type="text"],
 input.input[type="password"] {
   min-width: 24rem;
@@ -100,8 +101,11 @@ input.input[type="password"] {
   transition: all 0.3s ease-in-out;
   background-color: var(--color-bg);
 }
+
+input.input[type="email"]:focus,
 input.input[type="text"]:focus,
 input.input[type="password"]:focus,
+input.input[type="email"]:active,
 input.input[type="text"]:active,
 input.input[type="password"]:active {
   outline: none;
