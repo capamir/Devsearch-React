@@ -17,12 +17,12 @@ function Navbar() {
           </label>
           <ul className="header__menu">
             <li className="header__menuItem">
-              <Link to="/profile" className="link">
+              <Link to="/" className="link">
                 Developers
               </Link>
             </li>
             <li className="header__menuItem">
-              <Link to="projects.html" className="link">
+              <Link to="/projects" className="link">
                 Projects
               </Link>
             </li>
@@ -32,7 +32,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="header__menuItem">
-              <Link to="account.html" className="link">
+              <Link to="/profile" className="link">
                 My Account
               </Link>
             </li>
