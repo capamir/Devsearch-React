@@ -37,7 +37,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="header__menuItem">
-              <Link to="login.html" className="btn btn--sub link">
+              <Link to="/login" className="btn btn--sub link">
                 Login/Sign Up
               </Link>
             </li>

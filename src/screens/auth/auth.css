@@ -1,0 +1,119 @@
+.auth {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  height: 99vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 0;
+}
+
+.auth::after {
+  z-index: -1;
+  opacity: 0.1;
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(../../../public/images/pattern.jpg);
+}
+
+.auth > .card {
+  padding: 3rem 4rem;
+  width: 95%;
+  max-width: 65rem;
+}
+
+@media screen and (min-width: 650px) {
+  .auth > .card {
+    padding: 5rem 8rem;
+    width: 95%;
+    max-width: 65rem;
+  }
+}
+
+.auth__header h3 {
+  color: var(--color-sub);
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.auth__header p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.auth__form {
+  margin: 3rem 0;
+}
+
+.auth .auth__form label,
+.auth .auth__alternative p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-sub-light);
+}
+
+.auth .auth__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+.auth .auth__actions a {
+  text-decoration: underline;
+}
+
+.auth .auth__alternative a {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.form {
+  display: block;
+}
+
+.form__field {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form__field > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+input.input[type="text"],
+input.input[type="password"] {
+  min-width: 24rem;
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-light);
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-bg);
+}
+input.input[type="text"]:focus,
+input.input[type="password"]:focus,
+input.input[type="text"]:active,
+input.input[type="password"]:active {
+  outline: none;
+  border: 2px solid var(--color-main);
+}
+
+.btn--lg {
+  font-size: 1.8rem;
+  padding: 1.2rem 4.5rem;
+}
+
+.btn--sub {
+  background-color: var(--color-sub);
+  color: var(--color-white);
+}
