@@ -8,6 +8,7 @@ import {
   Register,
   ForgotPassword,
   Projects,
+  Project,
 } from "./screens";
 import "./app.css";
 
@@ -20,6 +21,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/project" element={<Project />} />
+
           <Route path="/message" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />

@@ -9,3 +9,5 @@ export { default as ProjectCard } from "./projectCard/ProjectCard";
 export { default as Pagination } from "./pagination/Pagination";
 export { default as SocialLink } from "./socialLink/SocialLink";
 export { default as Skill } from "./skill/Skill";
+
+export { default as Comment } from "./comment/Comment";
