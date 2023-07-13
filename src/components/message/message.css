@@ -1,0 +1,35 @@
+.message {
+  padding: 2.5rem 0;
+}
+
+.message > a span {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.message.message--unread a span {
+  font-weight: 700;
+  color: var(--color-sub);
+}
+
+.message:not(:last-child) {
+  border-bottom: 2px solid var(--color-white-light);
+}
+
+.message > a {
+  display: flex;
+  gap: 1rem;
+}
+
+.message__author,
+.message__date {
+  flex-basis: 25%;
+}
+
+.message__subject {
+  flex-basis: 50%;
+}
+
+.message__date {
+  text-align: right;
+}

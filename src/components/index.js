@@ -11,3 +11,4 @@ export { default as SocialLink } from "./socialLink/SocialLink";
 export { default as Skill } from "./skill/Skill";
 
 export { default as Comment } from "./comment/Comment";
+export { default as Message } from "./message/Message";

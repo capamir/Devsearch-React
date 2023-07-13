@@ -27,7 +27,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="header__menuItem">
-              <Link to="inbox.html" className="link">
+              <Link to="/inbox" className="link">
                 Inbox
               </Link>
             </li>
