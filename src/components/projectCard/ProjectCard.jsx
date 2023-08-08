@@ -1,38 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { TagMin as Tag } from "../../components";
 import "./projectCard.css";
 
-function ProjectCard() {
+function ProjectCard({ project }) {
   return (
     <div className="column">
       <div className="card project">
-        <Link to="/project" className="project">
+        <Link to={`/project/${project.id}`} className="project">
           <img
             className="project__thumbnail"
-            src="images/project-a.png"
-            alt="project thumbnail"
+            src={project.image}
+            alt={project.title}
           />
           <div className="card__body">
-            <h3 className="project__title">DevSearch UI Design</h3>
+            <h3 className="project__title">{project.title}</h3>
             <p>
               <Link className="project__author" to="/profile">
-                By Shahriar P. Shuvo
+                By {project.author}
               </Link>
             </p>
             <p className="project--rating">
-              <span style={{ fontWeight: "bold" }}>92%</span> Postitive Feedback
-              (62 Votes)
+              <span style={{ fontWeight: "bold" }}>{project.vote_ratio}%</span>{" "}
+              Postitive Feedback ({project.vote_total} Votes)
             </p>
             <div className="project__tags">
-              <span className="tag tag--pill tag--main">
-                <small>NextJS</small>
-              </span>
-              <span className="tag tag--pill tag--main">
-                <small>GraphQL</small>
-              </span>
-              <span className="tag tag--pill tag--main">
-                <small>TypeScript</small>
-              </span>
+              {project.tags?.map((tag) => (
+                <Tag tagName={tag.name} key={tag.id} />
+              ))}
             </div>
           </div>
         </Link>

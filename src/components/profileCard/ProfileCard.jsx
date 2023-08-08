@@ -3,32 +3,23 @@ import { Link } from "react-router-dom";
 import { TagMin as Tag } from "../index";
 import "./profileCard.css";
 
-function ProfileCard() {
+function ProfileCard({ profile }) {
   return (
     <div className="column card">
       <div className="dev">
         <Link to="/profile" className="card__body">
           <div className="dev__profile">
-            <img className="avatar avatar--md" src="images/dennis.jpg" alt="" />
+            <img className="avatar avatar--md" src={profile.image} alt="" />
             <div className="dev__meta">
-              <h3>Shahriar P. Shuvo</h3>
-              <h5>FullStack Web Designer & Developer</h5>
+              <h3>{profile.name}</h3>
+              <h5>{profile.intro}</h5>
             </div>
           </div>
-          <p className="dev__info">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Cupiditate, ducimus inventore! Sunt, veniam veritatis? Veritatis
-            placeat, deleniti iure tempore veniam perspiciatis, soluta
-            cupiditate animi, exercitationem molestias nam doloremque architecto
-            odit.
-          </p>
+          <p className="dev__info">{profile.description}</p>
           <div className="dev__skills">
-            <Tag tagName={"JavaScript"} />
-            <Tag tagName={"React"} />
-            <Tag tagName={"SCSS"} />
-            <Tag tagName={"Nodejs"} />
-            <Tag tagName={"Express"} />
-            <Tag tagName={"GraphQL"} />
+            {profile.tags.map((tag) => (
+              <Tag key={tag.id} tagName={tag.name} />
+            ))}
           </div>
         </Link>
       </div>

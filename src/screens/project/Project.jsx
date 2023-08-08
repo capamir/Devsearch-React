@@ -1,9 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { TagLg as Tag } from "../../components";
 import "./project.css";
 
+const tempProject = {
+  id: 1,
+  author: "Md. Shahriar Parvez",
+  title: "Portfolio Landing Page for a Coding Mentor",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima harum maxime debitis amet voluptates esse a perferendis tempora, natus pariatur obcaecati odit quisquam fugit deserunt.",
+  vote_total: 18,
+  vote_ratio: 36,
+  tags: [
+    {
+      id: 1,
+      name: "Figma",
+    },
+    {
+      id: 1,
+      name: "Vuejs",
+    },
+    {
+      id: 1,
+      name: "GraphQL",
+    },
+    {
+      id: 1,
+      name: "TypeScript",
+    },
+    {
+      id: 1,
+      name: "Postgres",
+    },
+  ],
+};
+
 function Project() {
+  const [project, setProject] = useState({});
+
+  useEffect(() => {
+    setProject(tempProject);
+  }, []);
   return (
     <main className="singleProject my-md">
       <div className="container">
@@ -11,15 +48,9 @@ function Project() {
           <div className="column column--1of3">
             <h3 className="singleProject__subtitle">Tools & Stacks</h3>
             <div className="singleProject__toolStack">
-              <Tag tagName={"Figma"} />
-              <Tag tagName={"Vuejs"} />
-              <Tag tagName={"REST API"} />
-              <Tag tagName={"GraphQL"} />
-              <Tag tagName={"TypeScript"} />
-              <Tag tagName={"Webpack"} />
-              <Tag tagName={"NextJS"} />
-              <Tag tagName={"Postgres"} />
-              <Tag tagName={"MongoDB"} />
+              {project.tags?.map((tag) => (
+                <Tag key={tag.id} tagName={tag.name} />
+              ))}
             </div>
             <Link className="singleProject__liveLink" to="/" target="_blank">
               <i className="im im-external-link"></i>Source Code
@@ -32,31 +63,17 @@ function Project() {
               alt="portfolio thumbnail"
             />
             <Link to="/profile" className="singleProject__developer">
-              Md. Shahriar Parvez
+              {project.author}
             </Link>
-            <h2 className="singleProject__title">
-              Portfolio Landing Page for a Coding Mentor
-            </h2>
+            <h2 className="singleProject__title">{project.title}</h2>
             <h3 className="singleProject__subtitle">About the Project</h3>
-            <div className="singleProject__info">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              harum maxime debitis amet voluptates esse a perferendis tempora,
-              natus pariatur obcaecati odit quisquam fugit deserunt.
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-              voluptates earum possimus a perferendis culpa omnis, libero quae
-              soluta, obcaecati amet. Quam earum ad qui reprehenderit eligendi
-              porro ab possimus fugit voluptatem rerum eius sapiente, nemo
-              mollitia aperiam suscipit culpa corrupti officiis dicta soluta ut
-              similique! Iste soluta quae tempora alias assumenda? Nam nesciunt
-              nihil enim tempore cum quo architecto?
-            </div>
+            <div className="singleProject__info">{project.description}</div>
 
             <div className="comments">
               <h3 className="singleProject__subtitle">Feedback</h3>
               <h5 className="project--rating">
-                36% Postitive Feedback (18 Votes)
+                {project.vote_ratio}% Postitive Feedback ({project.vote_total}{" "}
+                Votes)
               </h5>
 
               <form className="form" action="#" method="POST">

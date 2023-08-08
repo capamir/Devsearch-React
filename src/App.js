@@ -21,9 +21,9 @@ function App() {
       <div className="main">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/:id" element={<Profile />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/project" element={<Project />} />
+          <Route path="/project/:id" element={<Project />} />
           <Route path="/inbox" element={<Inbox />} />
           <Route path="/message" element={<MessageDetail />} />
           <Route path="/login" element={<Login />} />

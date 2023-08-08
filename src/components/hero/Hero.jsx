@@ -1,7 +1,7 @@
 import React from "react";
 import "./hero.css";
 
-function Hero() {
+function Hero({ search, onHandleSearch }) {
   return (
     <section className="hero-section text-center">
       <div className="container container--narrow">
@@ -22,6 +22,8 @@ function Hero() {
                 type="text"
                 name="text"
                 placeholder="Search by developer name"
+                value={search}
+                onChange={(e) => onHandleSearch(e.target.value)}
               />
             </div>
 
