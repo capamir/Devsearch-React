@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./auth.css";
 
 function ForgotPassword() {
+  const [email, setEmail] = useState("");
+
   return (
     <div className="auth">
       <div className="card">
@@ -23,6 +25,8 @@ function ForgotPassword() {
               type="email"
               name="email"
               placeholder="e.g. user@domain.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 

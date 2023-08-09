@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./auth.css";
 
 function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className="auth">
       <div className="card">
@@ -23,6 +25,8 @@ function Login() {
               type="text"
               name="username"
               placeholder="Enter your username..."
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
 
@@ -34,6 +38,8 @@ function Login() {
               type="password"
               name="password"
               placeholder="••••••••"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="auth__actions">

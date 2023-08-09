@@ -33,10 +33,21 @@ const tempProject = {
       name: "Postgres",
     },
   ],
+  comment: [
+    {
+      id: 1,
+      userId: 1,
+      image: "../../images/dennis.jpg",
+      name: "Sulamita Ivanov",
+      comment:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit alias numquam perferendis mollitia minus minima exercitationem possimus ab deserunt qui, soluta iusto doloribus eveniet similique consequuntur ratione, dignissimos ut magni laborum quo",
+    },
+  ],
 };
 
 function Project() {
   const [project, setProject] = useState({});
+  const [comment, setComment] = useState("");
 
   useEffect(() => {
     setProject(tempProject);
@@ -84,6 +95,8 @@ function Project() {
                     name="message"
                     id="formInput#textarea"
                     placeholder="Write your comments here..."
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
                   ></textarea>
                 </div>
                 <input
@@ -93,53 +106,31 @@ function Project() {
                 />
               </form>
               <div className="commentList">
-                <div className="comment">
-                  <a href="/profile">
-                    <img
-                      className="avatar avatar--md"
-                      src="../../images/dennis.jpg"
-                      alt="user"
-                    />
-                  </a>
-                  <div className="comment__details">
-                    <a href="/profile" className="comment__author">
-                      Sulamita Ivanov
-                    </a>
-                    <p className="comment__info">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Reprehenderit alias numquam perferendis mollitia minus
-                      minima exercitationem possimus ab deserunt qui, soluta
-                      iusto doloribus eveniet similique consequuntur ratione,
-                      dignissimos ut magni laborum quo.
-                    </p>
-                  </div>
-                </div>
-                <div className="comment">
-                  <a href="profile.html">
-                    <img
-                      className="avatar avatar--md"
-                      src="../../images/dennis.jpg"
-                      alt="user"
-                    />
-                  </a>
-                  <div className="comment__details">
-                    <a href="profile.html" className="comment__author">
-                      Dennis Ivanov
-                    </a>
-                    <p className="comment__info">
-                      Consectetur adipisicing elit. Reprehenderit alias numquam
-                      perferendis mollitia minus minima exercitationem possimus
-                      ab deserunt qui, ratione, dignissimos ut magni laborum
-                      quo.
-                    </p>
-                  </div>
-                </div>
+                {project.comment?.map((comment) => (
+                  <Comment comment={comment} />
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+  );
+}
+
+function Comment({ comment }) {
+  return (
+    <div className="comment">
+      <Link to={`/profile/${comment.userId}`}>
+        <img className="avatar avatar--md" src={comment.image} alt="user" />
+      </Link>
+      <div className="comment__details">
+        <Link to={`/profile/${comment.userId}`} className="comment__author">
+          {comment.name}
+        </Link>
+        <p className="comment__info">{comment.comment}</p>
+      </div>
+    </div>
   );
 }
 

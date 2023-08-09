@@ -7,7 +7,7 @@ function ProfileCard({ profile }) {
   return (
     <div className="column card">
       <div className="dev">
-        <Link to="/profile" className="card__body">
+        <Link to={`/profile/${profile.id}`} className="card__body">
           <div className="dev__profile">
             <img className="avatar avatar--md" src={profile.image} alt="" />
             <div className="dev__meta">

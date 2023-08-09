@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./auth.css";
 
 function Register() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [passowrd, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
   return (
     <div className="auth">
       <div className="card">
@@ -23,6 +28,8 @@ function Register() {
               type="text"
               name="text"
               placeholder="e.g. Dennis Ivanov"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
 
@@ -34,6 +41,8 @@ function Register() {
               type="email"
               name="email"
               placeholder="e.g. user@domain.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
@@ -45,6 +54,8 @@ function Register() {
               type="password"
               name="password"
               placeholder="••••••••"
+              value={passowrd}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <div className="form__field">
@@ -57,6 +68,8 @@ function Register() {
               type="password"
               name="confirm-password"
               placeholder="••••••••"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
           <div className="auth__actions">
